@@ -1,0 +1,468 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: auto;
+}
+
+
+nav {
+    height: 75px;
+    width: 100%;
+    background-color: #0e0e23;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo-txt {
+    font-size: 30px;
+    font-family: cursive;
+    line-height: 75px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-list {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 75px;
+    background-color:#2A3B51 ;
+    float: right;
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-list li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-list li a {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration:none;
+}
+
+.active,
+.nav-list li a:hover {
+    color: #5da19a;
+    transition: 0.50s;
+}
+
+.drop-button {
+    display: block;
+    size: 30px;
+    color: #075379;
+    float: right;
+    line-height: 75px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-list {
+    height: 50vh;
+    z-index:9;
+}
+
+#check:checked~.nav-list li {
+    display: block;
+    z-index:9;
+
+}
+
+
+
+@media (min-width:720px) {
+    .nav {
+    height: 100px;
+    background-color:transparent;
+    }
+    .drop-button {
+    display:none;
+    }
+    .nav-list {
+        position: relative;
+        height: 100px;
+        top: 0px;
+        background: none;
+        float: right;
+        text-align: right;
+        margin-right: 25px;
+    }
+
+    .nav-list li {
+        display: inline-block;
+        opacity: 1;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+        .nav-list {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2em;
+    }
+
+    .whole-page {
+        width: 100%;
+        height: 1024px; 
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .whole-blue-background {
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 14, 35, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .brain-image {
+        width: 61.5%;
+        height: 43.7%;
+        /*background: url("images/v96_4.png");*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center center;*/
+        /*background-size: cover;*/
+        opacity: 1;
+        position: absolute;
+        top: 8.9%;
+        left: 38.1%;
+        overflow: hidden;
+    }
+
+    .quote-text {
+        width: 31.3%;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 137px;
+        left: 125px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 2.5vw;
+        opacity: 1;
+        text-align: left;
+    }
+    }
+
+
+@media(max-width: 718px) {
+   
+    .whole-page {
+        width: 100%;
+        height: 1024px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .whole-blue-background {
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 14, 35, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .brain-image {
+        width: 61.5%;
+        height: 43.7%;
+        background: url("images/v96_4.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 8.9%;
+        left: 38.1%;
+        overflow: hidden;
+    }
+
+    .quote-text {
+        width: 31.3%;
+        color: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 137px;
+        left: 125px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 2.5vw;
+        opacity: 1;
+        text-align: left;
+    }
+}
+
+@media (max-width: 501px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 14px;
+        background: rgba(13, 14, 35, 1);
+        
+    }
+    .whole-page {
+     background: rgba(13, 14, 35, 1);
+    }
+
+
+    .whole-blue-background {
+        width: 501px;
+        height: 791px;
+        background: rgba(13, 14, 35, 1);
+        opacity: 1;
+        position: absolute;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .quote-text {
+        width: 450px;
+        /*color: rgba(255, 255, 255, 1);*/
+        color: white;
+        position: absolute;
+        top: 156px;
+        left: 42px;
+        font-family: Inter;
+        font-weight: Bold;
+        font-size: 7.5vw;
+        opacity: 1;
+        text-align: left;
+    }
+
+    .brain-image {
+        width: 501px;
+        height: 352px;
+        background: url("../images/v117_23.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 402px;
+        left: 0px;
+        overflow: hidden;
+    }
+    .circle {
+        display: none;
+    }
+}
+
+    
+
+
+    /* Page 2 styling */
+
+
+    pagel {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0;
+        background-color: rgb(13,14,35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        
+    }
+    /* #first-stat {
+        margin-top: -500px;
+    } */
+    section {
+        padding: 500px;
+    }
+    .info-container {
+        background-color: rgb(23,36,80);
+        display: flex;
+        width: 60%
+        
+    }
+    #white {
+        background-color: white;
+    }
+    pagel p {
+        color: white;
+        align-self: center;
+        font-size: 24px;
+        text-align: center;
+        padding-right: 30px;
+    }
+    #blue-text {
+        color: #0d0e23;
+    }
+    pagel img {
+        height: 200px;
+        padding: 30px;
+    }
+    #mh {
+        width: 1024px;
+    }
+    
+    @media (max-width: 501px){
+        .info-container {
+         flex-direction: column;
+         text-align: center;
+         margin-left: 0px;
+    
+        }
+        pagel p {
+            self-align: center;
+            padding-left: 17px;
+        }
+        resources {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+/* Page 3 css */
+
+.carousel-item {
+    height:480px;
+}
+
+
+.resources {
+    margin-top: 100px;
+}
+
+
+footer {
+    margin:25px 0px 0px 0px;
+    padding:10px;
+    background:#0e0e23 ;
+}
+
+
+footer ul li a {
+    display:inline-block;
+    position:relative;
+    float:right;
+    margin:0px 10px;
+    color:white;
+    text-decoration: none;
+}
+
+small {
+    display:flex;
+    justify-content:flex-end;
+    margin-top:2em;
+    font-weight:500;
+    color: white;
+}
+
+
+resources {
+    display: flex;
+    /* flex: 1 1 1; */
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.ard {
+     width: 416px; 
+}
+.ard .img-container {
+    height: 223px;
+}
+.ard img {
+    width: 90%;
+}
+ #talk-space-logo {
+    padding-top: 60px;
+} 
+
+ard p {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(33,37,41);
+    line-height: 24px;
+}
+ .org-info {
+    height: 155px;
+}
+ard h5 {
+    font-size: 20;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: rgb(61,64,66);
+}
+
+ button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: rgb(13 110 253);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    width: 180px;
+    margin-top: 30px;
+    margin-left: 40px;
+    /* position: relative;
+    bottom: 10px; */
+ }
+ .button-container {
+    text-align: center;
+ }
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements end q*/
+  }
